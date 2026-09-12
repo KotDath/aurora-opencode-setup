@@ -1,0 +1,9 @@
+{
+  "sdk": "~/AuroraOS/bin/sfdk",
+  "audb": "audb",
+  "target": "AuroraOS-5.2.1.200-x86_64",
+  "signing_key": null,
+  "signing_cert": null,
+  "validator_profile": "regular",
+  "device": "Aurora OS Emulator 5.2.1.200"
+}

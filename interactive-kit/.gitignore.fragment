@@ -1,0 +1,8 @@
+# Merge these entries into an existing project's .gitignore.
+aurora.local.json
+.aurora/
+.agent-logs/
+.opencode/node_modules/
+__pycache__/
+*.pyc
+build/

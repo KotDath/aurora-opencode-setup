@@ -1,0 +1,66 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "orchestrator",
+  "mcp": {
+    "aurora": {
+      "type": "remote",
+      "url": "https://developer.auroraos.ru/api/mcp",
+      "enabled": true
+    },
+    "duckduckgo": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "--with",
+        "mcp==1.26.0",
+        "--from",
+        "duckduckgo-mcp-server==0.4.0",
+        "duckduckgo-mcp-server"
+      ],
+      "enabled": true,
+      "timeout": 30000
+    }
+  },
+  "agent": {
+    "orchestrator": {
+      "model": "xai/grok-4.6",
+      "variant": "high"
+    },
+    "architect": {
+      "model": "xai/grok-4.6",
+      "variant": "high"
+    },
+    "integration-researcher": {
+      "model": "opencode-go/deepseek-v4.1-flash",
+      "variant": "high"
+    },
+    "aurora-researcher": {
+      "model": "opencode-go/deepseek-v4.1-flash",
+      "variant": "high"
+    },
+    "ui-researcher": {
+      "model": "opencode-go/deepseek-v4.1-flash",
+      "variant": "high"
+    },
+    "implementer": {
+      "model": "opencode-go/deepseek-v4.1-flash",
+      "variant": "high"
+    },
+    "reviewer": {
+      "model": "xai/grok-4.6",
+      "variant": "high"
+    }
+  },
+  "model": "opencode-go/deepseek-v4.1-flash",
+  "small_model": "opencode-go/deepseek-v4.1-flash",
+  "plugin": [
+    "opencode-cmd-provider@1.5.0"
+  ],
+  "compaction": {
+    "auto": true,
+    "prune": true,
+    "reserved": 20000,
+    "preserve_recent_tokens": 8000,
+    "tail_turns": 2
+  }
+}

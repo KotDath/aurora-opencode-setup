@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+interactive-kit/.opencode/node_modules/
+interactive-kit/.opencode/package.json
+interactive-kit/.opencode/package-lock.json
+interactive-kit/.opencode/bun.lock
+interactive-kit/.opencode/.gitignore
